@@ -9,7 +9,8 @@ baseUrl: ""
 google_analytics_id: UA-71760888-10
 
 owner:
-  twitter: --iot_maker_korea  
+  twitter: iot_maker_korea
+  facebook: iot.maker.korea
 
 
 future:      false  # publish future dated posts --  true, false (default)
