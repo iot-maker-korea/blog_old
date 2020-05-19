@@ -1,7 +1,8 @@
 title:            iot-maker
 description:      소스배포
 copyright:        iot-maker-korea
-url: https://iot-maker-korea.github.io # add your custom site url (format: https://example.com)
+url: "https://iot-maker-korea.github.io" # add your custom site url (format: https://example.com)
+baseUrl: ""
 google_analytics_id: UA-71760888-1
 
 remote_theme: benradford/Slate-and-Simple-Jekyll-Theme
