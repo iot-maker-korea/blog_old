@@ -1,6 +1,6 @@
 ---
 title: "아두이노"
-permalink: /categories/embedded/Arduino
+permalink: /arduino
 layout: category
 author_profile: true
 taxonomy: Arduino
