@@ -1,6 +1,6 @@
 ---
 title: "아두이노"
-permalink: /Arduino
+permalink: '/Arduino'
 layout: category
 author_profile: true
 ---
