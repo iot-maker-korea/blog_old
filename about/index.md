@@ -2,24 +2,19 @@
 layout: post
 title: About
 ---
-<p>
-This theme is available for free under the MIT open source software license.
-<br>
-The theme can be found <a href="https://github.com/benradford/Slate-and-Simple-Jekyll-Theme">here</a>.
-<br>
-The theme requires <a href="https://jekyllrb.com">Jekyll</a>, a static-site generator compatible with <a href="https://pages.github.com">pages.github.com</a>.
-</p>
 
-<hr>
+# 소모임 iot maker
 
-<p>
-Maecenas tempus ullamcorper ante, sed eleifend purus mollis a. Sed ut molestie eros. Etiam arcu mi, consequat id ligula nec, faucibus dictum tortor. Ut tempus felis non commodo luctus. Nunc ac ullamcorper leo. Suspendisse et lorem eu leo iaculis vehicula nec vel mauris. Nullam eget porta ante.
-</p>
+## 소스공유 및 학습자료 공유 목적.
 
-<p>
-Nunc tellus justo, pharetra sit amet blandit nec, mattis eu turpis. Praesent efficitur posuere nunc, non dapibus lectus placerat eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean a tincidunt velit. Nam ac ultricies metus. Morbi non erat ac nunc rutrum congue. Aliquam ultrices viverra felis quis pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-</p>
+> 대전, 오프라인 중심   
+> __site__: http://iot-maker.kro.kr   
+> __Facebook__: https://www.facebook.com/iot.maker.korea
 
-<p>
-Phasellus pellentesque odio eget massa finibus, in aliquam lectus tincidunt. Suspendisse potenti. Fusce nisi ipsum, facilisis sed nunc non, congue gravida augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut elementum nulla. Ut iaculis elit ac lectus elementum, mollis porta ex ultricies. Maecenas pretium lectus quis vulputate feugiat. Curabitur vitae ex in eros eleifend volutpat vitae sed dui.
-</p>
+### 정기모임 / 매주 일요일 / 둔산동 / 11:00 ~ 13:00
+
+### - 참고자료
+
+__Arduino__: http://arduino.zelkun.ze.am  
+
+__Raspberry__ Pi: http://rasp.zelkun.ze.am
