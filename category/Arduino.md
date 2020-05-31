@@ -1,5 +1,5 @@
 ---
-title: "아두이노"
+title: "Arduino"
 permalink: '/Arduino'
 layout: category
 author_profile: true
