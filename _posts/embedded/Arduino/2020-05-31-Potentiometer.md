@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Arduino Basic
+title: 가변저항(Potentiometer)
 comments: true
 category: [Arduino]
 tags: [arduino,아두이노]
