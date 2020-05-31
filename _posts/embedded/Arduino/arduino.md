@@ -1,9 +1,8 @@
 ---
 title: "아두이노"
-permalink: /arduino
+permalink: /Arduino
 layout: category
 author_profile: true
-taxonomy: arduino
 ---
 
 아두이노 관련글
