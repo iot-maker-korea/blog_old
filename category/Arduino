@@ -1,7 +1,8 @@
 ---
-layout: category
-title: Arduino
+title: "아두이노"
 permalink: '/Arduino'
+layout: category
+author_profile: true
 ---
 
-post Arduino
+아두이노 관련글
