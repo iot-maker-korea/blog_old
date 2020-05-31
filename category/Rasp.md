@@ -1,5 +1,5 @@
 ---
-title: "Raspberry Pi"
+title: "Raspberrypi"
 subTitle: "라즈베리파이"
 permalink: '/rasp'
 layout: category
