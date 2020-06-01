@@ -1,6 +1,6 @@
 ---
 title: "Arduino"
-permalink: '/arduino'
+permalink: '/embedded/arduino'
 layout: category
 author_profile: true
 subTitle: "아두이노"
