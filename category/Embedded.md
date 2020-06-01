@@ -1,6 +1,6 @@
 ---
 title: "Embedded"
-permalink: '/Embedded'
+permalink: '/embedded'
 layout: category
 author_profile: true
 subTitle: "임베디드"
