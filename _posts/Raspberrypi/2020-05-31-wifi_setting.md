@@ -1,0 +1,149 @@
+---
+layout: post
+title: 003.무선랜(WiFi) 설정
+comments: true
+category: [Raspberrypi]
+tags: [raspberrypi,라즈베리파이,raspbian]
+---
+
+# [무선랜(WiFi) 설정][1]
+
+Headless 진행할때 WiFi 설정을 넣어주긴 했지만  
+장소가 바뀌면 주위에 있는 WiFi로 수정해야 하는 일이 발생합니다
+
+## 무선랜 사용여부
+
+WiFi를 사용하려면 WiFi 동글이 필요하지만  
+Pi3 이상부터는 WiFi/Bluetooth가 내장되어서 별도로 필요하진 않습니다  
+그래도 무선랜 인터페이스가 잡혀있는지 확인을 해봐야 하니  
+다음 명령어를 입력해서 확인해줍니다  
+
+iwconfig -a
+
+<pre><code>
+pi@rasp-dev:~ $ iwconfig
+wlan0     IEEE 802.11  ESSID:"YourSSID"  
+          Mode:Managed  Frequency:2.442 GHz  Access Point: 00:00:00:00:00:00   
+          Bit Rate=65 Mb/s   Tx-Power=31 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=70/70  Signal level=-29 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:139  Invalid misc:0   Missed beacon:0
+
+eth0      no wireless extensions.
+
+lo        no wireless extensions.
+
+pi@rasp-dev:~ $ 
+</code></pre>
+iwconfig는 무선랜 설정을 확인하는 명령어로  
+위와 같이 wlan0 이 나온다면 사용할 수 있습니다  
+무선랜이 여러개라면 wlan뒤에 숫자가 달라집니다
+
+### 무선랜 관련 명령어
+
+* iw dev
+* iwlist 
+* iwconfig  
+
+이 외에도 다양한 명령어가 있습니다
+
+---
+
+## /etc/wpa_supplicant/wpa_supplicant.conf 수정
+
+무선랜 사용여부를 확인했으니  
+WiFi 접속정보를 확인한뒤 wpa_supplicant.conf 파일을 수정해줍니다
+
+<pre><code>
+  ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+  update_config=1
+  country=US
+  
+  # WPA-PSK 네트워크
+  network={
+    ssid="SSID"
+    psk="PASSWORD"
+    key_mgmt=WPA-PSK
+  }
+  # 공개 네트워크
+  network={
+    ssid="SSID"
+    key_mgmt=NONE
+  }
+</code></pre>
+공개된 네트워크라면 key_mgmt=NONE이 겠지만  
+대부분 WPA-PSK 암호화를 사용하니 key_mgmt=WPA-PSK 설정으로 하시면됩니다  
+혹시 이미 내용이 있는경우에는 뒤에 붙이시면 됩니다
+
+---
+
+## PING
+
+PING은 인터넷에 연결되었는지 확인하는데 참 좋은방법중 하나로  
+ping 8.8.8.8 을 해보면 ping 여부에 따라 네트워크 연결여부를 확인할 수 있습니다
+
+<pre><code>pi@rasp-dev:~ $ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=53 time=45.8 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=53 time=46.6 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=53 time=45.6 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=53 time=51.10 ms
+^C
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 8ms
+rtt min/avg/max/mdev = 45.646/47.524/51.977/2.597 ms
+pi@rasp-dev:~ $ 
+</code></pre>
+위와같이 icmp 응답이 있다면 연결된걸로 판단할 수 있습니다  
+중단은 Ctrl + C 로 하시면 됩니다
+
+---
+## IP 확인
+
+일반적인 IP 확인방법은 ifconfig -a 명령어를 사용합니다
+
+<pre><code>pi@rasp-dev:~ $ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.25  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::ba27:ebff:fe5a:8161  prefixlen 64  scopeid 0x20<link>
+        ether ff:ff:ff:ff:ff:ff  txqueuelen 1000  (Ethernet)
+        RX packets 14883306  bytes 9709483592 (9.0 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 10464932  bytes 11629002372 (10.8 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 454386170  bytes 65828889342 (61.3 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 454386170  bytes 65828889342 (61.3 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.24  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 ffff::ffff:ffff:ffff:ffff  prefixlen 64  scopeid 0x20<link>
+        ether b8:27:eb:0f:d4:34  txqueuelen 1000  (Ethernet)
+        RX packets 43404182  bytes 2554182621 (2.3 GiB)
+        RX errors 0  dropped 8  overruns 0  frame 0
+        TX packets 20859101  bytes 3717570145 (3.4 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+pi@rasp-dev:~ $ 
+</code></pre>
+이중에 wlan0 를 확인하시면 됩니다  
+inet 192.168.0.24 가 연결된 IP로 확인되네요
+
+다른 방법으로는 ip addr 명령어가 있습니다
+
+---
+
+## Ref
+- [https://zelkun.tistory.com][1]
+- [wpa_supplicant.conf][2]
+
+[1]: https://zelkun.tistory.com/entry/018-Raspberry-Pi-라즈베리-파이-학교-WiFi-사용-설정-WPA-EAP-PEAP
+[2]: https://w1.fi/cgit/hostap/plain/wpa_supplicant/wpa_supplicant.conf
