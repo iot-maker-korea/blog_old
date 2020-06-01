@@ -3,7 +3,7 @@ title: "Embedded"
 permalink: '/embedded'
 layout: category
 author_profile: true
-subTitle: "아두이노"
+subTitle: "임베디드"
 ---
 
 embedded 관련글
