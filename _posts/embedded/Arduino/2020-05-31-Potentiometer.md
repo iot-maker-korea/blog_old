@@ -2,7 +2,7 @@
 layout: post
 title: 가변저항(Potentiometer)
 comments: true
-category: [Arduino]
+category: [Embedded, Arduino]
 tags: [arduino,아두이노]
 ---
 
