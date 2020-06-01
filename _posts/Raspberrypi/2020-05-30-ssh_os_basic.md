@@ -1,3 +1,10 @@
+---
+layout: post
+title: 002.SSH and OS Basic
+comments: true
+category: [Raspberrypi]
+tags: [raspberrypi,라즈베리파이,raspbian]
+---
 
 # 라즈베리 2주차 학습
 
