@@ -1,6 +1,6 @@
 ---
 title: "rpi_gpio"
-permalink: '/Raspberrypi/rpi_gpio'
+permalink: '/raspberrypi/rpi_gpio'
 layout: category
 parents: Raspberrypi
 author_profile: true
