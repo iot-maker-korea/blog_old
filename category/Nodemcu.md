@@ -1,8 +1,9 @@
 ---
 title: "Nodemcu"
-permalink: '/nodemcu'
+permalink: '/embedded/nodemcu'
 layout: category
 author_profile: true
+parents: embedded
 subTitle: "nodemcu"
 ---
 
