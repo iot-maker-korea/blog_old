@@ -3,7 +3,7 @@ title: "Arduino"
 permalink: '/embedded/arduino'
 layout: category
 author_profile: true
-parents: embedded
+parents: Embedded
 subTitle: "아두이노"
 ---
 
