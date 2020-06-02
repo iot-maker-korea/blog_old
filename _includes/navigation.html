@@ -8,10 +8,10 @@
             <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
             <!--li><a href="https://www.github.com/benradford/Slate-and-Simple-Jekyll-Theme">GET THEME</a></li-->
             <!--header class="site-category"-->
-              <ul>
+            <ul>
                 {% assign pages_list = site.pages %}
-                  <span> {% node.parents %}</span>
                 {% for node in pages_list %}
+                                  <span> {% node.parents %}</span>
                   {% if node.title != null %}
                     {% if node.layout == "category" %}
                       <li><a class="category-link {% if page.url == node.url %} active{% endif %}"
