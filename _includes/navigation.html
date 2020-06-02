@@ -6,9 +6,11 @@
             <li><a href="/tags/">TAGS</a></li>
             <li><a href="/about/">ABOUT</a></li>
             <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
-            <header class="site-category">
+            <!--li><a href="https://www.github.com/benradford/Slate-and-Simple-Jekyll-Theme">GET THEME</a></li-->
+            <!--header class="site-category"-->
               <ul>
                 {% assign pages_list = site.pages %}
+                  <span> {% node.parents %}</span>
                 {% for node in pages_list %}
                   {% if node.title != null %}
                     {% if node.layout == "category" %}
@@ -17,13 +19,8 @@
                     {% endif %}
                   {% endif %}
                 {% endfor %}
-
             </ul>
-            </header>
-
-            
-            
-            <!--li><a href="https://www.github.com/benradford/Slate-and-Simple-Jekyll-Theme">GET THEME</a></li-->
+            <!--/header-->
         </ul>
     </nav>
 </center>
