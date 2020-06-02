@@ -13,19 +13,23 @@
                 {% for node in pages_list %}
                   {% if node.parents == null %}
                     {% if node.title != null %}
+                        <!-- main category -->
                         {% if node.layout == "category" %}
                           <li><a class="category-link {% if page.url == node.url %} active{% endif %}"
                           href="{{ site.baseUrl }}{{ node.url }}">{{ node.title }}</a></li>
                         {% endif %}
+                        <!-- main category -->
 
-                                {% for node2 in pages_list %}
-                                   {% if node2.parents != null and node.title == node2.parents %}
-                                        {% if node.layout == "category" %}
-                                          <li><a class="category-link {% if page.url == node2.url %} active{% endif %}"
-                                          href="{{ site.baseUrl }}{{ node2.url }}">{{ node2.title }}</a></li>
-                                        {% endif %}
-                                   {% endif %}
-                                {% endfor %}
+                        <!-- sub category -->
+                        {% for node2 in pages_list %}
+                           {% if node2.parents != null and node.title == node2.parents %}
+                                {% if node.layout == "category" %}
+                                  <li><a class="category-link {% if page.url == node2.url %} active{% endif %}"
+                                  href="{{ site.baseUrl }}{{ node2.url }}">{{ node2.title }}</a></li>
+                                {% endif %}
+                           {% endif %}
+                        {% endfor %}
+                        <!-- sub category -->
 
                       {% endif %}
                     {% endif %}
