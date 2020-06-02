@@ -2,6 +2,7 @@
 title: "wiringpi"
 permalink: '/Raspberrypi/wiringpi'
 layout: category
+parents: Raspberrypi
 author_profile: true
 subTitle: "wiringpi GPIO"
 ---
