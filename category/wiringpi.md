@@ -1,6 +1,6 @@
 ---
 title: "wiringpi"
-permalink: '/Raspberrypi/wiringpi'
+permalink: '/raspberrypi/wiringpi'
 layout: category
 parents: Raspberrypi
 author_profile: true
