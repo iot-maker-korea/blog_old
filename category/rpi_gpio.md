@@ -2,6 +2,7 @@
 title: "rpi_gpio"
 permalink: '/Raspberrypi/rpi_gpio'
 layout: category
+parents: Raspberrypi
 author_profile: true
 subTitle: "python GPIO"
 ---
