@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 001.headless_install
+title: 001.NODEMCU + DHT11 + Cayenne
 comments: true
 category: [Nodemcu]
 tags: [nodemcu,embedded,dht11,온습도,센서]
