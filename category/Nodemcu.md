@@ -3,7 +3,7 @@ title: "Nodemcu"
 permalink: '/embedded/nodemcu'
 layout: category
 author_profile: true
-parents: embedded
+parents: Embedded
 subTitle: "nodemcu"
 ---
 
