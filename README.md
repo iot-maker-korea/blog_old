@@ -1,4 +1,4 @@
-# iot-maker-korea.github.io
+# https://iot-maker.kro.kr
 iot-maker-korea.github.io
 
 ## 소모임 iot maker
@@ -6,6 +6,7 @@ iot-maker-korea.github.io
 ### 소스공유 및 학습자료 공유 목적.
 
 > 대전, 오프라인 중심   
+> __somoim__: http://somoim.iot-maker.kro.kr
 > __Site__: http://iot-maker.kro.kr   
 > __Facebook__: https://www.facebook.com/iot.maker.korea  
 > __Instagram__: https://www.instagram.com/iot.maker.korea  
