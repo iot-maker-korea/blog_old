@@ -1,4 +1,4 @@
-# https://iot-maker.kro.kr
+# http://iot-maker.kro.kr
 iot-maker-korea.github.io
 
 ## 소모임 iot maker
