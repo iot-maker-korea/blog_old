@@ -7,6 +7,7 @@ url: "https://iot-maker.kro.kr" # add your custom site url (format: https://exam
 baseUrl: ""
 
 google_analytics_id: UA-71760888-10
+google_adsense_id: ca-pub-8727303446601569
 
 owner:
   twitter: iot_maker_korea
