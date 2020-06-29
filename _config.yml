@@ -22,7 +22,6 @@ gems:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
-  - jekyll-thumbnail
 
 sass:
   sass_dir: _sass
