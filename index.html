@@ -30,6 +30,7 @@ layout: post-index
     <!-- POST TAGS -->
     <div class="inline-tags">
         <span>
+            {% thumbnail https://neilpatel.com/wp-content/uploads/2017/08/image5.png 50x50 %}
         {% for tag in post.tags %}
             <a href="/tags/#{{tag}}">#{{ tag }}&nbsp;&nbsp;&nbsp;</a>
         {% endfor %}
